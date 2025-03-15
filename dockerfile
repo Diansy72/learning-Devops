@@ -1,11 +1,11 @@
-# Gunakan image dasar dari nginx (web server)
+# Gunakan image base resmi dari NGINX
 FROM nginx:alpine
 
-# Salin file HTML ke direktori default nginx
-COPY index.html /usr/share/nginx/html/index.html
+# Salin file login.html ke direktori default NGINX
+COPY login.html /usr/share/nginx/html/index.html
 
-# Expose port 80 (port default untuk HTTP)
+# Tentukan port yang akan digunakan oleh container
 EXPOSE 80
 
-# Perintah untuk menjalankan nginx
+# Perintah untuk menjalankan NGINX saat container dijalankan
 CMD ["nginx", "-g", "daemon off;"]
